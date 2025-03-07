@@ -1,6 +1,17 @@
-<app-nav-bar />
-<app-section-header />
+<div class="layout">
+  <header class="header">
+    <app-nav-bar />
+  </header>
 
-<div>
-  <router-outlet />
+  <section class="section-header">
+    <app-section-header />
+  </section>
+
+  <main class="content">
+    <router-outlet />
+  </main>
+
+  <footer class="footer">
+    <app-footer />
+  </footer>
 </div>

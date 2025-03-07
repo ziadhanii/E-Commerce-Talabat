@@ -6,14 +6,14 @@ import { BreadcrumbComponent, BreadcrumbItemDirective, BreadcrumbService } from 
 
 @Component({
   selector: 'app-section-header',
-  imports: [CommonModule, BreadcrumbComponent, BreadcrumbItemDirective],
+  imports: [CommonModule, BreadcrumbComponent],
   templateUrl: './section-header.component.html',
   styleUrl: './section-header.component.scss'
 })
 
 export class SectionHeaderComponent implements OnInit {
-  breadcrumb$!: Observable<any[]>;
 
+  breadcrumb$!: Observable<any[]>;
   constructor(private bcService: BreadcrumbService) { }
 
   ngOnInit(): void {
