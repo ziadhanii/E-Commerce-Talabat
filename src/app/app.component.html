@@ -1,17 +1,11 @@
-<div class="layout">
-  <header class="header">
-    <app-nav-bar />
-  </header>
+<app-nav-bar />
 
-  <section class="section-header">
-    <app-section-header />
-  </section>
+<app-section-header />
 
-  <main class="content">
-    <router-outlet />
-  </main>
+<router-outlet />
 
-  <footer class="footer">
-    <app-footer />
-  </footer>
-</div>
+<!-- <app-footer /> -->
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#E95420" type="ball-scale-multiple" [fullScreen]="true">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>

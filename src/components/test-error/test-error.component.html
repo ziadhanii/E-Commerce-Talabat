@@ -1,1 +1,21 @@
-<p>test-error works!</p>
+<section class="my-5 section-error">
+  <div class="container b-5">
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <button (click)="get500Error()" class="btn btn-outline-danger">Test 500 Error</button>
+      <button (click)="get404Error()" class="btn btn-outline-warning">Test 404 Error</button>
+      <button (click)="get400Error()" class="btn btn-outline-primary">Test 400 Error</button>
+      <button (click)="get400ValidationError()" class="btn btn-outline-info">Test 400 Validation Error</button>
+      <button (click)="get401Error()" class="btn btn-outline-secondary">Test 401 Error</button>
+    </div>
+
+    <div class="mt-4" *ngIf="validationErrors && validationErrors.length > 0">
+      <h4 class="text-danger">Validation Errors:</h4>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-danger" *ngFor="let error of validationErrors">
+          {{ error }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
