@@ -45,7 +45,7 @@ export class TestErrorComponent {
   get400ValidationError() {
     this.buggyService.get400ValidationError().subscribe({
       next: response => console.log(response),
-      error: error => this.validationErrors = error
+      error: error => this.validationErrors = error.errors
     });
   }
 }

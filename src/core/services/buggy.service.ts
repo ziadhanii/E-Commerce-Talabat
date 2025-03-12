@@ -32,11 +32,7 @@ export class BuggyService {
 
 
   get400ValidationError() {
-    return this.http.post('https://wezaa.runasp.net/Buggy/validation-error', {});
+    return this.http.post(this.baseUrl + '/validation-error', {});
   }
-
-
-
-
 
 }
